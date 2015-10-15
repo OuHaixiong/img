@@ -23,8 +23,8 @@ $arrayFileName = explode('_', $fileName);
 // 查看源文件是否存在
 $originPath = ROOT_PATH . $dirname . '/origin/' . $arrayFileName[0] . '.' . $extension;
 if (!is_file($originPath)) {
-    die('源文件不存在！！！！');
-//     exit();
+//     die('源文件不存在！！！！');
+    exit();
 }
 
 $widthPlace = array('c'=>'center', 'w'=>'west', 'e'=>'east');
@@ -43,7 +43,8 @@ if ($size < 2) { // 原图的缩略图（不符合规范）
         $image->thumbnail($arrayWidthHeight[0], $arrayWidthHeight[1]);
     } else { // 缩略后进行裁剪
         if (!array_key_exists($arrayFileName[2], $widthPlace)) {
-            die('不符合规范！');
+//             die('不符合规范！');
+            exit;
         }
         if ((!isset($arrayFileName[3])) || (!array_key_exists($arrayFileName[3], $heightPlace))) {
             $arrayFileName[3] = 'c';
