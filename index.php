@@ -6,7 +6,7 @@ defined('LIBRARIES_PATH') || define('LIBRARIES_PATH', realpath(ROOT_PATH . '/lib
 include_once LIBRARIES_PATH . '/Common/Image/Abstract.php';
 include_once LIBRARIES_PATH . '/Common/Image.php';
 include_once LIBRARIES_PATH . '/Common/Imagick.php';
-var_dump($_SERVER);exit;
+var_dump($_SERVER);
 // 分析路径
 $filePath = $_SERVER['REDIRECT_URL']; // /user_pic/15_10_15/fBjmVpy4151015101330_100x100_w_s.jpeg
 $fileName = pathinfo($filePath, PATHINFO_FILENAME); // 文件名，不包括后缀
