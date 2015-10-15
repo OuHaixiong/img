@@ -1,0 +1,7 @@
+#
+# robots.txt for csc86
+#
+User-agent: * 
+Disallow: /data
+Disallow: /fonts
+Disallow: /upload

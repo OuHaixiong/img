@@ -1,0 +1,18 @@
+# zend的重写 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+#ErrorDocument 404 http://mvc.com/404.html #有重写的都不行 ,最好不要带域名，这样写是错误的
+#ErrorDocument 404 /404.html
+# 本项目跟目录下的404页面（apache的配置中的意思也是一样的），有重写是不行的（不管是写在apache的配置里，还是下在.htaccess文件中都一样）
+
+# nginx
+#server {
+#    location / {
+#        try_files $uri $uri/ /index.php;
+#    }
+#}
