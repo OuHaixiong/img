@@ -6,12 +6,10 @@ defined('LIBRARIES_PATH') || define('LIBRARIES_PATH', realpath(ROOT_PATH . '/lib
 include_once LIBRARIES_PATH . '/Common/Image/Abstract.php';
 include_once LIBRARIES_PATH . '/Common/Image.php';
 include_once LIBRARIES_PATH . '/Common/Imagick.php';
-var_dump($_SERVER);
+
 // 分析路径
 $filePath = $_SERVER['REQUEST_URI']; // /user_pic/15_10_15/fBjmVpy4151015101330_100x100_w_s.jpeg?csc86=861
-var_dump($filePath);
 $filePath = preg_replace('/\?.*/', '', $filePath);
-var_dump($filePath);exit;
 $fileName = pathinfo($filePath, PATHINFO_FILENAME); // 文件名，不包括后缀
 $extension = pathinfo($filePath, PATHINFO_EXTENSION); // 后缀，不包括点
 $dirname = pathinfo($filePath, PATHINFO_DIRNAME); // 文件目录，不包括斜杠/
