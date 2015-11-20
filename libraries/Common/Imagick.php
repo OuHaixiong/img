@@ -122,8 +122,8 @@ class Common_Imagick extends Common_Image_Abstract
      * 如果只传入来宽或高的一个（另一个传null或0），就会按照宽或高等比例缩放
      * 如果源图片尺寸比目标图片尺寸还要小，将进行拉伸
      * 如果宽和高都不传，将保持源图片的宽和高
-     * @param integer $width 目标宽
-     * @param integer $height 目标高
+     * @param integer $width 目标宽 (一定是整数或null)
+     * @param integer $height 目标高 (一定是整数或null)
      * @param boolean $bestfit 是否变形压缩，默认true：不变形，false：变形
      * @return boolean
      * @see Lib_Image_Abstract::thumbnail
