@@ -1,4 +1,5 @@
 <?php
+header('Content-Type:text/html;charset=utf-8'); //定义字符集（如果报错统一调用404的函数进行渲染，就不需要这个了）
 
 // 下面是使用 imagick 处理图片
 defined('ROOT_PATH') || define('ROOT_PATH', realpath(dirname(__FILE__))); // 后面不带 /
